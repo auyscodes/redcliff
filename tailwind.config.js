@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         rblack: "#262626",
+        rgray: "#333",
       },
     },
   },

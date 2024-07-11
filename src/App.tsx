@@ -26,7 +26,11 @@ function App() {
           <Features />
           <Neighborhood />
           <Realtor />
-          <div className="bg-rblack text-white">
+        </div>
+      </div>
+      <div className="bg-rblack text-white">
+        <div className="flex justify-center">
+          <div className="container font-sans p-4 lg:px-[48px]">
             <Contact />
             <Footer />
           </div>
