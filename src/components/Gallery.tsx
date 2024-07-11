@@ -82,6 +82,34 @@ export const Gallery = () => {
             />
           </div>
         </div>
+        <div className="md:grid md:grid-cols-2 mt-4 gap-4">
+          <div className="flex flex-col gap-4">
+            <img
+              className="sm:h-[240px] md:h-[268px] lg:h-[360px] rounded-lg"
+              src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0f342e9a178b5d33e4831_pexels-max-rahubovskiy-8134809.webp"
+              alt="Bedroom with wallpaper and lamps"
+            />
+            <img
+              className="sm:h-[320px] md:h-[268px] lg:h-[424px] rounded-lg"
+              src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0f34204c45b03ced6df52_pexels-max-rahubovskiy-8134779.webp"
+              alt="Large glass shower cabin"
+            />
+          </div>
+          <div className="flex flex-col mt-4 md:mt-0">
+            <img
+              className="sm:h-[240px] md:h-[100%] rounded-lg"
+              src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0f342a884445bf846f136_pexels-max-rahubovskiy-8134806.webp"
+              alt="Bathroom with shower and windows"
+            />
+          </div>
+        </div>
+        <div className="mt-4">
+          <img
+            className="h-[89vh] rounded-lg"
+            src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0f3418b955225e02de8b7_pexels-max-rahubovskiy-8134753.webp"
+            alt="Living room with a fireplace and a view of the pool"
+          />
+        </div>
       </div>
     </div>
   );

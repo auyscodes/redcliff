@@ -1,10 +1,14 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
 import { Overview } from "./components/Overview";
 import { Gallery } from "./components/Gallery";
+import { Plan } from "./components/Plan";
+import { Features } from "./components/Features";
+import { Neighborhood } from "./components/Neighborhood";
+import { Realtor } from "./components/Realtor";
+import { Contact } from "./components/Contact";
 
 function App() {
   return (
@@ -18,7 +22,14 @@ function App() {
           <Home />
           <Overview />
           <Gallery />
-          <Footer />
+          <Plan />
+          <Features />
+          <Neighborhood />
+          <Realtor />
+          <div className="bg-rblack text-white">
+            <Contact />
+            <Footer />
+          </div>
         </div>
       </div>
     </>
