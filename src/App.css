@@ -1,0 +1,6 @@
+.logo-ellipse {
+  background-color: var(--black);
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
