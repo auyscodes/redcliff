@@ -1,6 +1,9 @@
 export const Contact = () => {
   return (
-    <div className="flex flex-col  pb-36 border-b-[1px] border-gray-400  ">
+    <div
+      id="contact"
+      className="flex flex-col  pb-36 border-b-[1px] border-gray-400  "
+    >
       <div
         id="plan"
         className="mt-36 flex flex-col lg:flex-row lg:flex-nowrap w-full"
@@ -16,7 +19,9 @@ export const Contact = () => {
                 </p>
               </div>
               <div className="mt-16 md:mt-0">
-                <p className="text-sm text-gray-400">Looking for Expedited Assistance?</p>
+                <p className="text-sm text-gray-400">
+                  Looking for Expedited Assistance?
+                </p>
                 <p className="text-3xl mt-4">+1 (405) 288-2248</p>
                 <p className="text-3xl mt-2">hello@newhouse.com</p>
               </div>

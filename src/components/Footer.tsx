@@ -1,9 +1,9 @@
 export const Footer = () => {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row gap-6 justify-between pt-[35px] pb-[35px]  border-b-[1px] border-gray-400">
+      <div className="flex flex-col lg:flex-row gap-6 justify-between pt-[35px]   border-b-[1px] border-gray-400">
         <div>
-          <button className="border border-gray-400 rounded-md px-3 py-1 hover:bg-gray-400 hover:bg-opacity-15">
+          <button className="border border-gray-400 rounded-md px-3 py-1 mb-6 hover:bg-gray-400 hover:bg-opacity-15">
             &#x2022; &nbsp;1936 Redcliff
           </button>
         </div>
@@ -30,7 +30,7 @@ export const Footer = () => {
             Contact
           </a>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 mb-4">
           <a href="https://www.facebook.com/" target="_blank">
             <img
               className="w-[20px] h-[20px]"
@@ -61,9 +61,8 @@ export const Footer = () => {
         <p className="text-sm">© 2024, All Rights Reserved</p>
         <p className="text-sm">Licences</p>
       </div>
-      <div className="mt-20 text-rgray">
-        <p className="text-9xl">1936 </p>
-        <p className="text-9xl">Redcliff </p>
+      <div className="mt-20 text-rgray ">
+        <p className="text-[15vw] leading-[81%]">1936 Redcliff</p>
       </div>
     </div>
   );

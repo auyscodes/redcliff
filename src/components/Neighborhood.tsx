@@ -27,7 +27,7 @@ export const Neighborhood = () => {
               every palate.
             </p>
             <button className="mt-10 bg-black text-white rounded-md px-4 py-2  hover:bg-opacity-70 ">
-              Contact agent
+              <a href="#contact">Contact agent</a>
             </button>
           </div>
         </div>

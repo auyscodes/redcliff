@@ -27,7 +27,7 @@ export const Plan = () => {
             </p>
             <div className="mt-6 mb-16">
               <button className="bg-black text-white rounded-md px-4 py-2  hover:bg-opacity-70 ">
-                Contact Agent
+                <a href="#contact">Contact agent</a>
               </button>
             </div>
 

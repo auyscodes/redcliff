@@ -1,3 +1,5 @@
+import { Carousel } from "./Carousel";
+
 export const Home = () => {
   return (
     <div className="mb-[120px] lg:mb-[152px]">
@@ -32,7 +34,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="mt-[96px]">
-        
+        <Carousel />
       </div>
     </div>
   );

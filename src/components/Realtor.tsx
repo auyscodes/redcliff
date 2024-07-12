@@ -1,8 +1,6 @@
-import React from "react";
-
 export const Realtor = () => {
   return (
-    <div className="flex flex-col  pb-36  ">
+    <div id="realtor" className="flex flex-col  pb-36  ">
       <div
         id="plan"
         className="mt-36 flex flex-col lg:flex-row lg:flex-nowrap w-full"
@@ -36,7 +34,7 @@ export const Realtor = () => {
                   first-time buyers, seasoned investors, and sellers alike.
                 </p>
                 <button className="mt-10 bg-black text-white rounded-md px-4 py-2  hover:bg-opacity-70 ">
-                  Contact agent
+                  <a href="#contact">Contact agent</a>
                 </button>
               </div>
             </div>

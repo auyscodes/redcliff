@@ -6,7 +6,7 @@ export const NavBar = () => {
           &#x2022; &nbsp;1936 Redcliff
         </button>
       </div>
-      <div className="lg:flex gap-2 ">
+      <div className="lg:flex hidden gap-2 ">
         <a
           className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md px-2 py-2"
           href="#home"
@@ -43,12 +43,18 @@ export const NavBar = () => {
         >
           Realtor
         </a>
-        
       </div>
       <div className="hidden lg:block">
-        <button className="border border-gray-400 rounded-md px-4 py-2 hover:bg-black hover:text-white ">
+        {/* <button className="border border-gray-400 rounded-md px-4 py-2 hover:bg-black hover:text-white ">
+          <a href="#contact">Contact </a>
+        </button> */}
+
+        <a
+          className="border border-gray-400 rounded-md px-4 py-2 hover:bg-black hover:text-white "
+          href="#contact"
+        >
           Contact
-        </button>
+        </a>
       </div>
       <div className="lg:hidden border border-gray-400 rounded-lg px-2 flex ">
         <img src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bce8a884445bf824d9ce_Hamburger%20Menu.svg" />

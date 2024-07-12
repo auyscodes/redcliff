@@ -19,7 +19,10 @@ export const Features = () => {
     Detectors: "Carbon Monoxide, Smoke",
   };
   return (
-    <div className="flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 ">
+    <div
+      id="features"
+      className="flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 "
+    >
       <div
         id="plan"
         className="mt-36 flex flex-col lg:flex-row lg:flex-nowrap w-full"

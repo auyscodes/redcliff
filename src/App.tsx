@@ -30,7 +30,7 @@ function App() {
       </div>
       <div className="bg-rblack text-white">
         <div className="flex justify-center">
-          <div className="container font-sans p-4 lg:px-[48px]">
+          <div className="container font-sans px-4 py-1 lg:px-[48px]">
             <Contact />
             <Footer />
           </div>
