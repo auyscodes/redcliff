@@ -37,17 +37,17 @@ export const Features = () => {
           </div>
           <div className="flex flex-row gap-8 mt-10">
             <div className="basis-1/3 flex flex-col">
-              <div className="w-full h-[1px] bg-gray-200"></div>
+              <div className="w-full h-px bg-gray-200"></div>
               <h1 className="text-8xl pt-8">48</h1>
               <p className="mt-4">Maximum suitable people occupancy</p>
             </div>
             <div className="basis-1/3 border-opacity-10 flex flex-col">
-              <div className="w-full h-[1px] bg-gray-200"></div>
+              <div className="w-full h-px bg-gray-200"></div>
               <h1 className="text-8xl pt-8">5 Min</h1>
               <p className="mt-4">Walk to the nearest bus stop</p>
             </div>
             <div className="basis-1/3 border-opacity-10 flex flex-col">
-              <div className="w-full h-[1px] bg-gray-200"></div>
+              <div className="w-full h-px bg-gray-200"></div>
               <h1 className="text-8xl pt-8">0.08</h1>
               <p className="mt-4">Neighborhood crime rate</p>
             </div>

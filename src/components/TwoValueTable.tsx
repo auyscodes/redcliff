@@ -3,7 +3,7 @@ interface TwoValueTableProps {
 }
 export const TwoValueTable = ({ data }: TwoValueTableProps) => {
   return (
-    <div className="min-w-[320px] w-full flex flex-col gap-y-[18px]">
+    <div className="min-w-80 w-full flex flex-col gap-y-[18px]">
       {Object.keys(data).map((key, index) => {
         return (
           <div key={index} className="flex flex-col gap-y-[18px]">
@@ -11,7 +11,7 @@ export const TwoValueTable = ({ data }: TwoValueTableProps) => {
               <p className="basis-1/2">{key}</p>
               <p>{data[key]}</p>
             </div>
-            <div className="w-full h-[1px] bg-gray-200"></div>
+            <div className="w-full h-px bg-gray-200"></div>
           </div>
         );
       })}

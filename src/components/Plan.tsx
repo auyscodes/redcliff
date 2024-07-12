@@ -32,64 +32,64 @@ export const Plan = () => {
             </div>
 
             <div className="flex flex-row flex-wrap md:flex-nowrap gap-8">
-              <div className="min-w-[320px] w-full flex flex-col gap-y-[18px]">
+              <div className="min-w-80 w-full flex flex-col gap-y-[18px]">
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Kitchen</p>
                     <p>Gourmet Kitchen, Remodeled</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Laundry Room</p>
                     <p>Room, Inside</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Fireplace</p>
                     <p>Gas, Living Room</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Appliances</p>
                     <p>Built-In BBQ, Oven</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
               </div>
-              <div className="min-w-[320px] w-full flex flex-col gap-y-[18px]">
+              <div className="min-w-80 w-full flex flex-col gap-y-[18px]">
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Pool</p>
                     <p>In Ground, Heated</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Heat Type</p>
                     <p>Central</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Air Conditioning</p>
                     <p>Central, Multi/Zone</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
                 <div className="flex flex-col gap-y-[18px]">
                   <div className="flex ">
                     <p className="basis-1/2">Sewer</p>
                     <p>In Street Paid</p>
                   </div>
-                  <div className="w-full h-[1px] bg-gray-200"></div>
+                  <div className="w-full h-px bg-gray-200"></div>
                 </div>
               </div>
             </div>

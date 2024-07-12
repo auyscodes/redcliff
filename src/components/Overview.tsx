@@ -1,6 +1,9 @@
 export const Overview = () => {
   return (
-    <div id="overview" className="flex flex-wrap lg:flex-nowrap w-full pb-36 border-b-[1px] border-black border-opacity-10 ">
+    <div
+      id="overview"
+      className="flex flex-wrap lg:flex-nowrap w-full pb-36 border-b-[1px] border-black border-opacity-10 "
+    >
       <div className="lg:basis-1/12 pb-8">(01)</div>
       <div className="lg:basis-11/12">
         <div>
@@ -36,63 +39,63 @@ export const Overview = () => {
                 <p className="text-4xl mt-2">$1,150,000</p>
               </div>
             </div>
-            <div className="min-w-[320px] w-full flex flex-col gap-y-[18px]">
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Category</p>
-                        <p>Family House</p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+            <div className="min-w-80 w-full flex flex-col gap-y-[18px]">
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Category</p>
+                  <p>Family House</p>
                 </div>
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Status</p>
-                        <p>For Sale</p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Status</p>
+                  <p>For Sale</p>
                 </div>
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Year Built</p>
-                        <p>2018</p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Year Built</p>
+                  <p>2018</p>
                 </div>
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Bedrooms</p>
-                        <p>6</p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Bedrooms</p>
+                  <p>6</p>
                 </div>
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Bathrooms</p>
-                        <p>2</p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Bathrooms</p>
+                  <p>2</p>
                 </div>
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Square Footage</p>
-                        <p>3,760</p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Square Footage</p>
+                  <p>3,760</p>
                 </div>
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Car Garage</p>
-                        <p>3</p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Car Garage</p>
+                  <p>3</p>
                 </div>
-                <div className="flex flex-col gap-y-[18px]">
-                    <div className="flex ">
-                        <p className="basis-1/2">Floors</p>
-                        <p> 2 </p>
-                    </div>
-                    <div className="w-full h-[1px] bg-gray-200"></div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
+              <div className="flex flex-col gap-y-[18px]">
+                <div className="flex ">
+                  <p className="basis-1/2">Floors</p>
+                  <p> 2 </p>
                 </div>
+                <div className="w-full h-px bg-gray-200"></div>
+              </div>
             </div>
           </div>
         </div>

@@ -7,6 +7,12 @@ export default {
         rblack: "#262626",
         rgray: "#333",
       },
+      width: {
+        170: "664px",
+      },
+      height: {
+        89: "89vh",
+      },
     },
   },
   plugins: [],

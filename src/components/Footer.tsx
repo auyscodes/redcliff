@@ -33,7 +33,7 @@ export const Footer = () => {
         <div className="flex flex-row gap-4 mb-4">
           <a href="https://www.facebook.com/" target="_blank">
             <img
-              className="w-[20px] h-[20px]"
+              className="w-5 h-5"
               src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bd2a6d4bb5444c938edd_Facebook.svg"
               loading="lazy"
               alt="Facebook"
@@ -41,7 +41,7 @@ export const Footer = () => {
           </a>
           <a href="https://twitter.com/home" target="_blank">
             <img
-              className="w-[20px] h-[20px]"
+              className="w-5 h-5"
               src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bd292ae041403a3c122a_Twitter%20(X).svg"
               loading="lazy"
               alt="X (Twitter)"
@@ -49,7 +49,7 @@ export const Footer = () => {
           </a>
           <a href="https://linkedin.com/" target="_blank">
             <img
-              className="w-[20px] h-[20px]"
+              className="w-5 h-5"
               src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bd2a7baead22b868ea71_LinkedIn.svg"
               loading="lazy"
               alt="LinkedIn"

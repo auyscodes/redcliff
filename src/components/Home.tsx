@@ -2,7 +2,7 @@ import { Carousel } from "./Carousel";
 
 export const Home = () => {
   return (
-    <div className="mb-[120px] lg:mb-[152px]">
+    <div id="home" className="mb-[120px] lg:mb-[152px]">
       <div className="mt-[88px] flex ">
         <div className="flex flex-wrap gap-y-[48px] w-full justify-between ">
           <h1 className="text-8xl max-w-[776px]">
@@ -14,9 +14,9 @@ export const Home = () => {
 
               <div className="flex items-center gap-3 text-sm mt-2">
                 <span>6 Beds</span>
-                <div className="w-[16px] h-[1px] bg-gray-400"></div>
+                <div className="w-4 h-px bg-gray-400"></div>
                 <span>2 Bath</span>
-                <div className="w-[16px] h-[1px] bg-gray-400"></div>
+                <div className="w-4 h-px bg-gray-400"></div>
                 <span>3,760 Sq.Ft.</span>
               </div>
             </div>

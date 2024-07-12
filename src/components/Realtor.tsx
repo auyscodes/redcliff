@@ -9,18 +9,18 @@ export const Realtor = () => {
         <div className="flex flex-col  lg:basis-11/12">
           <div>
             <p>Realtor</p>
-            <p className="text-2xl mt-6 max-w-[328px]">
+            <p className="text-2xl mt-6 max-w-80">
               Helping You Discover Your Ideal Home
             </p>
           </div>
-          <div className="my-16 w-full h-[1px] bg-gray-200"></div>
+          <div className="my-16 w-full h-px bg-gray-200"></div>
           <div className="flex flex-col md:grid md:grid-cols-2 gap-4 ">
             <div className="flex flex-col  justify-between">
               <div>
                 <h1 className="text-7xl">Max Williams</h1>
                 <div className="flex items-center gap-3 text-sm mt-2">
                   <span>Licensed Realtor</span>
-                  <div className="w-[16px] h-[1px] bg-gray-400"></div>
+                  <div className="w-4 h-px bg-gray-400"></div>
                   <span>ID:RLT-7894-MB</span>
                 </div>
               </div>

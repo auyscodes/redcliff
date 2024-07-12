@@ -14,7 +14,7 @@ export const Contact = () => {
             <div className="flex flex-col justify-between">
               <div>
                 <p>Contact</p>
-                <p className="text-3xl mt-6 max-w-[328px]">
+                <p className="text-3xl mt-6 max-w-80">
                   Reach Out, Connect, and Start Your Path to Home
                 </p>
               </div>
