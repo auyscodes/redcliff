@@ -6,9 +6,14 @@ interface LikeableImageProps {
   className: string;
   src: string;
   alt: string;
+  isHidden?: boolean;
 }
-
-export const LikeableImage = ({ className, src, alt }: LikeableImageProps) => {
+export const LikeableImage = ({
+  className,
+  src,
+  alt,
+  isHidden,
+}: LikeableImageProps) => {
   const [likedImages, setLikedImages] = useState<Image[]>([]);
 
   useEffect(() => {
@@ -31,7 +36,7 @@ export const LikeableImage = ({ className, src, alt }: LikeableImageProps) => {
   };
 
   return (
-    <div className="relative">
+    <div className={"relative " + (isHidden ? "hidden" : "")}>
       <img className={className} src={src} alt={alt} />
       <div
         onClick={toggleLike}

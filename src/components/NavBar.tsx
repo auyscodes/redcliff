@@ -114,19 +114,26 @@ export const NavBar = ({ likedImages, onShowSideBar }: NavBarProps) => {
                 Contact
               </a>
             </div>
-            <div
-              onClick={() => setIsNavBarBurgerClicked(!isNavBarBurgerClicked)}
-              className="lg:hidden border border-gray-400 rounded-lg px-2 flex h-full"
-            >
-              <img
-                className={isNavBarBurgerClicked == false ? "block" : "hidden"}
-                src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bce8a884445bf824d9ce_Hamburger%20Menu.svg"
-              />
-              <img
-                className={isNavBarBurgerClicked == false ? "hidden" : "block"}
-                src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bce82fa7c492cc12200a_Close.svg"
-                alt="Close"
-              ></img>
+            <div className="flex flex-row gap-8 items-center lg:hidden ">
+              <div
+                role="button"
+                onClick={() => setIsNavBarBurgerClicked(!isNavBarBurgerClicked)}
+                className="border border-gray-400 rounded-lg w-10 h-10 px-2 flex  "
+              >
+                <img
+                  className={
+                    isNavBarBurgerClicked == false ? "block" : "hidden"
+                  }
+                  src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bce8a884445bf824d9ce_Hamburger%20Menu.svg"
+                />
+                <img
+                  className={
+                    isNavBarBurgerClicked == false ? "hidden" : "block"
+                  }
+                  src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bce82fa7c492cc12200a_Close.svg"
+                  alt="Close"
+                ></img>
+              </div>
             </div>
           </div>
         </div>

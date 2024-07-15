@@ -24,7 +24,7 @@ export const LikeSideBar = ({
         <div className="md:block hidden lg:col-span-2" />
         <div className="col-span-1 bg-white border-l border-gray-400 ">
           <div className="flex flex-col overflow-auto h-screen">
-            <div className="flex p-4 flex-row items-center justify-between sticky top-0 pt-8">
+            <div className="flex p-4 flex-row items-center justify-between sticky top-0 pt-8 bg-white z-10">
               <p className="text-black text-xl">Liked Images</p>
               <button
                 onClick={onHideSideBar}
