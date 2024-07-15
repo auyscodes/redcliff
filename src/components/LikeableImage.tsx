@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { getImages, toggleLiked, Image } from "../repos/ImageStorage";
 import { Heart } from "./icons/heart";
 
@@ -7,33 +7,37 @@ interface LikeableImageProps {
   src: string;
   alt: string;
 }
+
 export const LikeableImage = ({ className, src, alt }: LikeableImageProps) => {
   const [likedImages, setLikedImages] = useState<Image[]>([]);
-  const isLiked = (image: string) => {
-    if (likedImages.map(x=>x.src).includes(image)) {
-      return true;
-    }
 
-    return false;
-  };
   useEffect(() => {
     setLikedImages(getImages());
-    const handleStorage = () => {
-      setLikedImages(getImages());
-    };
-    window.addEventListener("storage", handleStorage);
-    return () => window.removeEventListener("storage", handleStorage);
   }, []);
+
+  const isLiked = (imageSrc: string) => {
+    return likedImages.some((image) => image.src === imageSrc);
+  };
+
+  const toggleLike = async () => {
+    const image: Image = { src, alt };
+
+    try {
+      const updatedImages = await toggleLiked(image);
+      setLikedImages(updatedImages);
+    } catch (error) {
+      console.error("Error toggling like: ", error);
+    }
+  };
+
   return (
-    <div className="relative ">
+    <div className="relative">
       <img className={className} src={src} alt={alt} />
       <div
-        onClick={() => {
-          toggleLiked({ src: src, alt: alt });
-        }}
+        onClick={toggleLike}
         className="absolute top-4 right-4 cursor-pointer"
       >
-        <Heart classNames="w-6 h-6 " filled={isLiked(src) ? true : false} />
+        <Heart classNames="w-6 h-6 " filled={isLiked(src)} />
       </div>
     </div>
   );

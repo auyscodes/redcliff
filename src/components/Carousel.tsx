@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LikeableImage } from "./LikeableImage";
 
 export const Carousel = () => {
   const imageDesc = [
@@ -45,7 +46,25 @@ export const Carousel = () => {
     setSelectedImage(index);
   };
   return (
-    <div className="relative w-full rounded-lg flex justify-center items-center  ">
+    <div className="relative w-full rounded-lg flex justify-center items-center">
+      {imageDesc.map((e, index) => {
+        return (
+          <div
+            key={index}
+            className={
+              index === selectedImage
+                ? "rounded-lg w-full h-screen overflow-hidden"
+                : "hidden"
+            }
+          >
+            <LikeableImage
+              className="block w-full h-full object-center object-cover"
+              src={e.imageSrc}
+              alt={e.imageDesc}
+            />
+          </div>
+        );
+      })}
       <div
         onClick={prevSlide}
         className="absolute left-5 md:left-10 hover:cursor-pointer flex justify-center items-center rounded-full bg-white backdrop-blur w-16 h-16 bg-opacity-10"
@@ -57,20 +76,6 @@ export const Carousel = () => {
           alt="Left"
         />
       </div>
-      {imageDesc.map((e, index) => {
-        return (
-          <img
-            key={index}
-            className={
-              index === selectedImage
-                ? "block w-full h-screen rounded-lg object-center object-cover"
-                : "hidden"
-            }
-            src={e.imageSrc}
-            alt={imageDesc.toString()}
-          />
-        );
-      })}
       <div
         onClick={nextSlide}
         className="absolute right-5 md:right-10 hover:cursor-pointer w-16 h-16 flex justify-center items-center rounded-full backdrop-blur bg-white bg-opacity-10"
