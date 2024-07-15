@@ -2,14 +2,14 @@ import { useRef } from "react";
 import useOnScreen from "../hooks/useOnScreen";
 
 export const Neighborhood = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isVisible = useOnScreen(ref);
 
   return (
     <div
       ref={ref}
       className={
-        "flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 " +
+        "flex flex-col  pb-36 border-b border-black border-opacity-10 " +
         (isVisible == true ? "animation-3s" : "")
       }
     >

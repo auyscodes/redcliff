@@ -15,7 +15,7 @@ function App() {
     <>
       <NavBar />
       <div className="flex justify-center">
-        <div className="container font-sans px-4 lg:px-[48px]">
+        <div className="container  px-4 lg:px-12">
           {/* <Routes>
             <Route path="/" element={<Home />} />
           </Routes> */}
@@ -30,7 +30,7 @@ function App() {
       </div>
       <div className="bg-rblack text-white">
         <div className="flex justify-center">
-          <div className="container font-sans px-4 py-1 lg:px-[48px]">
+          <div className="container  px-4 py-1 lg:px-12">
             <Contact />
             <Footer />
           </div>

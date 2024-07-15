@@ -60,9 +60,10 @@ export const Carousel = () => {
       {imageDesc.map((e, index) => {
         return (
           <img
+            key={index}
             className={
               index === selectedImage
-                ? "block w-full h-[100vh] rounded-lg"
+                ? "block w-full h-screen rounded-lg"
                 : "hidden"
             }
             src={e.imageSrc}
@@ -89,6 +90,7 @@ export const Carousel = () => {
         {imageDesc.map((_, index) => {
           return (
             <div
+              key={index}
               onClick={() => {
                 setSelectedImage(index);
               }}
@@ -97,7 +99,7 @@ export const Carousel = () => {
                   ? "rounded-full w-2 h-2 bg-white  cursor-pointer"
                   : "rounded-full w-2 h-2 bg-white bg-opacity-50 cursor-pointer"
               }
-            ></div>
+            />
           );
         })}
       </div>

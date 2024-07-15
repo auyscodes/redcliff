@@ -2,7 +2,7 @@ import { useRef } from "react";
 import useOnScreen from "../hooks/useOnScreen";
 
 export const Contact = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isVisible = useOnScreen(ref);
 
   return (
@@ -10,7 +10,7 @@ export const Contact = () => {
       ref={ref}
       id="contact"
       className={
-        "flex flex-col  pb-36 border-b-[1px] border-gray-400  " +
+        "flex flex-col  pb-36 border-b border-gray-400  " +
         (isVisible == true ? "animation-3s" : "")
       }
     >

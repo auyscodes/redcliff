@@ -2,7 +2,7 @@ import { useRef } from "react";
 import useOnScreen from "../hooks/useOnScreen";
 
 export const Realtor = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isVisible = useOnScreen(ref);
 
   return (

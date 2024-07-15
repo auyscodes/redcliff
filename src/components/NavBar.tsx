@@ -46,9 +46,9 @@ export const NavBar = () => {
         (hideNav ? "hideNav " : "")
       }
     >
-      <div className="container  font-sans px-4 lg:px-[48px]">
+      <div className="container  font-sans px-4 lg:px-12">
         <div className={" container lg:pr-20    "}>
-          <div className="flex flex-row justify-between pt-[28px] pb-[28px] border-b-gray-300 pr-10  ">
+          <div className="flex flex-row justify-between py-7 border-b-gray-300 pr-10  ">
             <div>
               <button className="border border-gray-400 rounded-md px-4 py-2 hover:bg-gray-400 hover:bg-opacity-15">
                 &#x2022; &nbsp;1936 Redcliff
@@ -56,37 +56,37 @@ export const NavBar = () => {
             </div>
             <div className="lg:flex hidden gap-2 ">
               <a
-                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md px-2 py-2"
+                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md p-2"
                 href="#home"
               >
                 Home
               </a>
               <a
-                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md px-2 py-2"
+                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md p-2"
                 href="#overview"
               >
                 Overview
               </a>
               <a
-                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md px-2 py-2"
+                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md p-2"
                 href="#gallery"
               >
                 Gallery
               </a>
               <a
-                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md px-2 py-2"
+                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md p-2"
                 href="#plan"
               >
                 Plan
               </a>
               <a
-                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md px-2 py-2"
+                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md p-2"
                 href="#features"
               >
                 Features
               </a>
               <a
-                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md px-2 py-2"
+                className="hover:bg-gray-400 hover:bg-opacity-15 rounded-md p-2"
                 href="#realtor"
               >
                 Realtor

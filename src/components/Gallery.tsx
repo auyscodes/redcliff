@@ -2,14 +2,14 @@ import { useRef } from "react";
 import useOnScreen from "../hooks/useOnScreen";
 
 export const Gallery = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isVisible = useOnScreen(ref);
 
   return (
     <div
       ref={ref}
       className={
-        "flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 " +
+        "flex flex-col  pb-36 border-b border-black border-opacity-10 " +
         (isVisible ? "animation-3s" : "")
       }
     >
@@ -63,7 +63,7 @@ export const Gallery = () => {
         </div>
         <div className="mt-4">
           <img
-            className="h-[89vh] rounded-lg"
+            className="h-89 rounded-lg"
             src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0f342abc1e2bfdcfb467e_pexels-max-rahubovskiy-8134762.webp"
             alt="Living room with stairs to the second floor"
           />

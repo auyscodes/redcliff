@@ -20,7 +20,7 @@ export const Features = () => {
     Security: "Exterior Lights",
     Detectors: "Carbon Monoxide, Smoke",
   };
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isVisible = useOnScreen(ref);
 
   return (
@@ -28,7 +28,7 @@ export const Features = () => {
       ref={ref}
       id="features"
       className={
-        "flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 " +
+        "flex flex-col  pb-36 border-b border-black border-opacity-10 " +
         (isVisible == true ? "animation-3s" : "")
       }
     >

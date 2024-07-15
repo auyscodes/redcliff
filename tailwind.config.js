@@ -14,6 +14,9 @@ export default {
         89: "89vh",
       },
     },
+    fontFamily: {
+      sans: ["Manrope", "sans-serif"],
+    },
   },
   plugins: [],
 };
