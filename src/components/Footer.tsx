@@ -13,7 +13,7 @@ export const Footer = () => {
             &#x2022; &nbsp;1936 Redcliff
           </button>
         </div>
-        <div className="flex gap-x-4  ">
+        <div className="flex flex-col md:flex-row gap-x-4  ">
           <a className="text-gray-400 hover:text-white" href="#home">
             Home
           </a>

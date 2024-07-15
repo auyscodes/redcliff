@@ -48,10 +48,10 @@ export const Carousel = () => {
     <div className="relative w-full rounded-lg flex justify-center items-center  ">
       <div
         onClick={prevSlide}
-        className="absolute left-10 hover:cursor-pointer flex justify-center items-center rounded-full bg-white backdrop-blur w-16 h-16 bg-opacity-10"
+        className="absolute left-5 md:left-10 hover:cursor-pointer flex justify-center items-center rounded-full bg-white backdrop-blur w-16 h-16 bg-opacity-10"
       >
         <img
-          className="w-6 h-6"
+          className="w-6 h-6 object-center object-cover"
           src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bd2a3ab226220872e6c9_Arrow-Left.svg"
           loading="lazy"
           alt="Left"
@@ -63,7 +63,7 @@ export const Carousel = () => {
             key={index}
             className={
               index === selectedImage
-                ? "block w-full h-screen rounded-lg"
+                ? "block w-full h-screen rounded-lg object-center object-cover"
                 : "hidden"
             }
             src={e.imageSrc}
@@ -73,18 +73,24 @@ export const Carousel = () => {
       })}
       <div
         onClick={nextSlide}
-        className="absolute right-10 hover:cursor-pointer w-16 h-16 flex justify-center items-center rounded-full backdrop-blur bg-white bg-opacity-10"
+        className="absolute right-5 md:right-10 hover:cursor-pointer w-16 h-16 flex justify-center items-center rounded-full backdrop-blur bg-white bg-opacity-10"
       >
         <img
-          className="w-6 h-6"
+          className="w-6 h-6 object-center object-cover"
           src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c0bd2a307c2aaf82dfe39d_Arrow-Right.svg"
           loading="lazy"
           alt="Right"
         />
       </div>
-      <div className="absolute bottom-10 left-10 text-4xl text-white">
-        {(selectedImage + 1).toString().padStart(2, "0")}/
-        {imageDesc.length.toString().padStart(2, "0")}
+      <div className="absolute bottom-10 inset-x-5 md:inset-x-10 flex justify-between items-center  text-white">
+        <div className="text-4xl">
+          {(selectedImage + 1).toString().padStart(2, "0")}/
+          {imageDesc.length.toString().padStart(2, "0")}
+        </div>
+
+        <p className=" text-md text-right text-white">
+          {imageDesc[selectedImage].imageDesc}
+        </p>
       </div>
       <div className="flex gap-2 absolute bottom-6">
         {imageDesc.map((_, index) => {
@@ -103,9 +109,9 @@ export const Carousel = () => {
           );
         })}
       </div>
-      <div className="bottom-10 text-md max-w-[168px] text-right text-white right-10 absolute">
+      {/* <div className="bottom-10 text-md max-w-[168px] text-right text-white right-10 absolute">
         {imageDesc[selectedImage].imageDesc}
-      </div>
+      </div> */}
     </div>
   );
 };

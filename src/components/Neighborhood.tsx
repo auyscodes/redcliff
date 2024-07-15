@@ -46,7 +46,7 @@ export const Neighborhood = () => {
       </div>
       <div className="mt-16">
         <img
-          className="rounded-lg h-89 w-full"
+          className="rounded-lg h-89 w-full object-center object-cover "
           src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c9d26128fb43ddfa44c702_65c10a117505cd18960559bd_j-king-ebuixpviQH0-unsplash%202.webp"
           alt="Buildings from a bird's eye view"
         />

@@ -48,7 +48,7 @@ export const NavBar = () => {
     >
       <div className="container  font-sans px-4 lg:px-12">
         <div className={" container lg:pr-20    "}>
-          <div className="flex flex-row justify-between py-7 border-b-gray-300 pr-10  ">
+          <div className="flex flex-row justify-between py-7 border-b-gray-300   ">
             <div>
               <button className="border border-gray-400 rounded-md px-4 py-2 hover:bg-gray-400 hover:bg-opacity-15">
                 &#x2022; &nbsp;1936 Redcliff
