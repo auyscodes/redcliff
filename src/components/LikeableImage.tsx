@@ -6,7 +6,7 @@ interface LikeableImageProps {
   className: string;
   src: string;
   alt: string;
-  isHidden: boolean;
+  isHidden?: boolean;
 }
 export const LikeableImage = ({
   className,
