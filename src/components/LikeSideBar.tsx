@@ -27,9 +27,9 @@ export const LikeSideBar = ({
         (showSideBar == true ? "" : "hidden")
       }
     >
-      <div className="grid grid-cols-3 mr-2">
-        <div className="col-span-2"></div>
-        <div className="col-span-1 bg-white border-l border-gray-400 ">
+      <div className="relative">
+        
+        <div className="absolute right-0 w-96 bg-white border-l border-gray-400 ">
           <div className="flex flex-col overflow-scroll pt-8 h-screen">
             <div className="flex p-4 flex-row items-center justify-between sticky">
               <p className="text-black text-xl">Liked Images</p>
