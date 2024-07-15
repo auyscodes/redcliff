@@ -6,11 +6,17 @@ interface LikeableImageProps {
   className: string;
   src: string;
   alt: string;
+  isHidden: boolean;
 }
-export const LikeableImage = ({ className, src, alt }: LikeableImageProps) => {
+export const LikeableImage = ({
+  className,
+  src,
+  alt,
+  isHidden,
+}: LikeableImageProps) => {
   const [likedImages, setLikedImages] = useState<Image[]>([]);
   const isLiked = (image: string) => {
-    if (likedImages.map(x=>x.src).includes(image)) {
+    if (likedImages.map((x) => x.src).includes(image)) {
       return true;
     }
 
@@ -25,7 +31,7 @@ export const LikeableImage = ({ className, src, alt }: LikeableImageProps) => {
     return () => window.removeEventListener("storage", handleStorage);
   }, []);
   return (
-    <div className="relative ">
+    <div className={"relative " + (isHidden ? "hidden" : "")}>
       <img className={className} src={src} alt={alt} />
       <div
         onClick={() => {
