@@ -13,9 +13,9 @@ import { Contact } from "./components/Contact";
 function App() {
   return (
     <>
+      <NavBar />
       <div className="flex justify-center">
         <div className="container font-sans px-4 lg:px-[48px]">
-          <NavBar />
           {/* <Routes>
             <Route path="/" element={<Home />} />
           </Routes> */}
