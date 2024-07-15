@@ -2,13 +2,13 @@ import { Carousel } from "./Carousel";
 
 export const Home = () => {
   return (
-    <div id="home" className="mb-[120px] lg:mb-[152px]">
+    <div id="home" className="mb-[120px] pt-4 lg:mb-[152px]">
       <div className="mt-[88px] flex ">
         <div className="flex flex-wrap gap-y-[48px] w-full justify-between ">
-          <h1 className="text-8xl max-w-[776px]">
+          <h1 className="text-8xl max-w-[776px] animation-1s">
             — Dream Single Family House in Silver Lake
           </h1>
-          <div className="flex flex-col justify-between max-w-[437px]">
+          <div className="flex flex-col justify-between max-w-[437px] animation-2s">
             <div className="flex flex-col">
               <h2 className="text-2xl">1936 Redcliff St, LA</h2>
 
@@ -33,7 +33,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mt-[96px]">
+      <div className="mt-[96px] hideShow">
         <Carousel />
       </div>
     </div>

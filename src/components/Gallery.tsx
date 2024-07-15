@@ -1,6 +1,6 @@
 export const Gallery = () => {
   return (
-    <div className="flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 ">
+    <div className="flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 animation-1s">
       <div
         id="gallery"
         className="mt-36 flex flex-col lg:flex-row lg:flex-nowrap w-full"

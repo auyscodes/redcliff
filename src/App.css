@@ -1,6 +1,44 @@
-.logo-ellipse {
-  background-color: var(--black);
-  border-radius: 50%;
-  width: 4px;
-  height: 4px;
+.animation-1s {
+  animation-name: downToUp;
+  animation-duration: 0.4s;
+}
+
+.animation-2s {
+  animation-name: downToUp;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+  animation-duration: 0.4s;
+}
+.hideShow {
+  animation-name: hideAndShow;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+  animation-duration: 0.2s;
+}
+
+@keyframes downToUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes hideAndShow {
+  from {
+    opacity: 0;
+    transform: scale3d(0, 0.6, 0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(0, 0, 0);
+  }
+}
+.hideNav {
+  transform: translateY(-100%);
+}
+.navBar {
+  transition: transform 1s ease-in-out;
 }

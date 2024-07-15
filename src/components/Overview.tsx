@@ -2,7 +2,7 @@ export const Overview = () => {
   return (
     <div
       id="overview"
-      className="flex flex-wrap lg:flex-nowrap w-full pb-36 border-b-[1px] border-black border-opacity-10 "
+      className="flex flex-wrap lg:flex-nowrap w-full pb-36 border-b-[1px] border-black border-opacity-10 animation-1s"
     >
       <div className="lg:basis-1/12 pb-8">(01)</div>
       <div className="lg:basis-11/12">
