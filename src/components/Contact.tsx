@@ -1,8 +1,18 @@
+import { useRef } from "react";
+import useOnScreen from "../hooks/useOnScreen";
+
 export const Contact = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useOnScreen(ref);
+
   return (
     <div
+      ref={ref}
       id="contact"
-      className="flex flex-col  pb-36 border-b-[1px] border-gray-400  "
+      className={
+        "flex flex-col  pb-36 border-b-[1px] border-gray-400  " +
+        (isVisible == true ? "animation-3s" : "")
+      }
     >
       <div
         id="plan"

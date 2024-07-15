@@ -1,4 +1,6 @@
+import { useRef } from "react";
 import { TwoValueTable } from "./TwoValueTable";
+import useOnScreen from "../hooks/useOnScreen";
 
 export const Features = () => {
   const interior = {
@@ -18,10 +20,17 @@ export const Features = () => {
     Security: "Exterior Lights",
     Detectors: "Carbon Monoxide, Smoke",
   };
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useOnScreen(ref);
+
   return (
     <div
+      ref={ref}
       id="features"
-      className="flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 "
+      className={
+        "flex flex-col  pb-36 border-b-[1px] border-black border-opacity-10 " +
+        (isVisible == true ? "animation-3s" : "")
+      }
     >
       <div
         id="plan"

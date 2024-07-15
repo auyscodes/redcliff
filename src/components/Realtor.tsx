@@ -1,6 +1,18 @@
+import { useRef } from "react";
+import useOnScreen from "../hooks/useOnScreen";
+
 export const Realtor = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useOnScreen(ref);
+
   return (
-    <div id="realtor" className="flex flex-col  pb-36  ">
+    <div
+      ref={ref}
+      id="realtor"
+      className={
+        "flex flex-col  pb-36  " + (isVisible == true ? "animation-3s" : "")
+      }
+    >
       <div
         id="plan"
         className="mt-36 flex flex-col lg:flex-row lg:flex-nowrap w-full"

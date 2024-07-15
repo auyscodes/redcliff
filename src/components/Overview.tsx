@@ -1,8 +1,18 @@
+import { useRef } from "react";
+import useOnScreen from "../hooks/useOnScreen";
+
 export const Overview = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useOnScreen(ref);
+
   return (
     <div
+      ref={ref}
       id="overview"
-      className="flex flex-wrap lg:flex-nowrap w-full pb-36 border-b-[1px] border-black border-opacity-10 animation-1s"
+      className={
+        "flex flex-wrap lg:flex-nowrap w-full pb-36 border-b-[1px] border-black border-opacity-10 " +
+        (isVisible == true ? "animation-3s" : "")
+      }
     >
       <div className="lg:basis-1/12 pb-8">(01)</div>
       <div className="lg:basis-11/12">

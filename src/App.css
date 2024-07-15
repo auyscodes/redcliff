@@ -9,6 +9,12 @@
   animation-delay: 0.3s;
   animation-duration: 0.4s;
 }
+.animation-3s {
+  animation-name: downToUp;
+  animation-fill-mode: backwards;
+  animation-delay: 0.3s;
+  animation-duration: 2s;
+}
 .hideShow {
   animation-name: hideAndShow;
   animation-fill-mode: backwards;

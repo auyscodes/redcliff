@@ -1,7 +1,13 @@
+import { useRef } from "react";
+import useOnScreen from "../hooks/useOnScreen";
+
 export const Footer = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useOnScreen(ref);
+
   return (
-    <div>
-      <div className="flex flex-col lg:flex-row gap-6 justify-between pt-[35px]   border-b-[1px] border-gray-400">
+    <div className="pb-20">
+      <div className="flex flex-col lg:flex-row gap-6 justify-between pt-[35px]   border-b-[1px] border-gray-400 ">
         <div>
           <button className="border border-gray-400 rounded-md px-3 py-1 mb-6 hover:bg-gray-400 hover:bg-opacity-15">
             &#x2022; &nbsp;1936 Redcliff
@@ -61,7 +67,12 @@ export const Footer = () => {
         <p className="text-sm">© 2024, All Rights Reserved</p>
         <p className="text-sm">Licences</p>
       </div>
-      <div className="mt-20 text-rgray ">
+      <div
+        ref={ref}
+        className={
+          "mt-20 text-rgray " + (isVisible == true ? "animation-3s" : "")
+        }
+      >
         <p className="text-[15vw] leading-[81%]">1936 Redcliff</p>
       </div>
     </div>

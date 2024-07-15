@@ -62,7 +62,7 @@ export const Carousel = () => {
           <img
             className={
               index === selectedImage
-                ? "block w-full h-[80vh] rounded-lg"
+                ? "block w-full h-[100vh] rounded-lg"
                 : "hidden"
             }
             src={e.imageSrc}
