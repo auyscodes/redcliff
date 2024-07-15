@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import { LikeContainer } from "./LikeContainer";
 
-export const NavBar = () => {
+interface NavBarProps {
+  onShowSideBar: () => void;
+}
+export const NavBar = ({ onShowSideBar }: NavBarProps) => {
   const [isNavBarBurgerClicked, setIsNavBarBurgerClicked] = useState(false);
   const [scrollData, setScrollData] = useState({
     y: 0,
@@ -92,10 +96,13 @@ export const NavBar = () => {
                 Realtor
               </a>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex lg:flex-row items-center gap-6">
               {/* <button className="border border-gray-400 rounded-md px-4 py-2 hover:bg-black hover:text-white ">
           <a href="#contact">Contact </a>
         </button> */}
+              <div onClick={onShowSideBar}>
+                <LikeContainer />
+              </div>
 
               <a
                 className="border border-gray-400 rounded-md px-4 py-2 hover:bg-black hover:text-white "

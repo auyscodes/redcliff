@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import useOnScreen from "../hooks/useOnScreen";
+import { LikeableImage } from "./LikeableImage";
 
 export const Neighborhood = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -45,7 +46,7 @@ export const Neighborhood = () => {
         </div>
       </div>
       <div className="mt-16">
-        <img
+        <LikeableImage
           className="rounded-lg h-89 w-full object-center object-cover "
           src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c9d26128fb43ddfa44c702_65c10a117505cd18960559bd_j-king-ebuixpviQH0-unsplash%202.webp"
           alt="Buildings from a bird's eye view"

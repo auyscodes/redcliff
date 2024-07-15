@@ -9,11 +9,21 @@ import { Features } from "./components/Features";
 import { Neighborhood } from "./components/Neighborhood";
 import { Realtor } from "./components/Realtor";
 import { Contact } from "./components/Contact";
+import { LikeSideBar } from "./components/LikeSideBar";
+import { useState } from "react";
 
 function App() {
+  const [showSideBar, setShowSideBar] = useState(false);
+  const closeSideBar = () => {
+    setShowSideBar(false);
+  };
+  const displaySideBar = () => {
+    setShowSideBar(true);
+  };
   return (
     <>
-      <NavBar />
+      <NavBar onShowSideBar={displaySideBar} />
+      <LikeSideBar showSideBar={showSideBar} onHideSideBar={closeSideBar} />
       <div className="flex justify-center">
         <div className="container  px-4 lg:px-12">
           {/* <Routes>
