@@ -38,7 +38,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="bg-white">
       <NavBar onShowSideBar={displaySideBar} likedImages={likedImages} />
       <LikeSideBar
         showSideBar={showSideBar}
@@ -67,7 +67,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
