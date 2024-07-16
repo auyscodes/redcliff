@@ -11,8 +11,6 @@ export const LikeSideBar = ({
   showSideBar,
   onHideSideBar,
 }: LikeSideBarProps) => {
-  console.log(likedImages);
-
   return (
     <div
       className={
