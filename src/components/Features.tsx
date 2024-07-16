@@ -66,7 +66,7 @@ export const Features = () => {
       </div>
       <div className="mt-20">
         <LikeableImage
-          className="h-89 rounded-lg object-center object-cover "
+          className="w-full h-89 rounded-lg object-center object-cover "
           src="https://assets-global.website-files.com/65c0adcc0da81a6bf7f0d17c/65c9d5548f408de00c64a4aa_65c103b7ea46f8e32a7e2a5e_pexels-max-rahubovskiy-8134813.webp"
           alt="Terrace under the open sky on the second floor of the building"
         />

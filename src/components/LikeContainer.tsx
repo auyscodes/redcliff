@@ -1,34 +1,21 @@
-import { useEffect, useState } from "react";
 import { Heart } from "./icons/heart";
-import { getImages, Image } from "../repos/ImageStorage";
 
-export const LikeContainer = () => {
-  const [likedImages, setLikedImages] = useState<Image[]>([]);
-  const hasOneBeenLiked = () => {
-    if (likedImages.length > 0) {
-      return true;
-    }
+interface LikeContainerProps {
+  numberOfLikedImages: number;
+}
 
-    return false;
-  };
-  useEffect(() => {
-    setLikedImages(getImages());
-    const handleStorage = () => {
-      setLikedImages(getImages());
-    };
-    window.addEventListener("storage", handleStorage);
-    return () => window.removeEventListener("storage", handleStorage);
-  }, []);
+export const LikeContainer = ({ numberOfLikedImages }: LikeContainerProps) => {
   return (
     <div className="relative">
-      <Heart classNames="w-6 h-6 " filled={hasOneBeenLiked() ? true : false} />
+      <Heart classNames="w-6 h-6 " filled={numberOfLikedImages > 0} />
+
       <div
         className={
           "text-white text-sm bg-black text-center rounded-full w-5 h-5 absolute left-4 top-4 " +
-          (likedImages.length == 0 ? "hidden" : "")
+          (numberOfLikedImages === 0 ? "hidden" : "")
         }
       >
-        {likedImages.length}
+        {numberOfLikedImages}
       </div>
     </div>
   );

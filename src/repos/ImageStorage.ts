@@ -2,6 +2,7 @@ export interface Image {
   src: string;
   alt: string;
 }
+
 export const isLiked = (image: Image) => {
   const retrievedData = localStorage.getItem("images");
   if (retrievedData) {
@@ -13,41 +14,41 @@ export const isLiked = (image: Image) => {
 
   return false;
 };
-export const getImages = () => {
-  const retrievedData = localStorage.getItem("images");
-  if (retrievedData) {
-    return JSON.parse(retrievedData);
-  }
 
-  return [];
-};
-export const addToLiked = (image: Image) => {
+export const getImages = (): Image[] => {
   const retrievedData = localStorage.getItem("images");
-  if (retrievedData) {
-    const images = JSON.parse(retrievedData);
-    if (!images?.map((x: Image) => x.src).includes(image.src)) {
-      images.push(image);
-      localStorage.setItem("images", JSON.stringify(images));
-    }
-  } else {
-    localStorage.setItem("images", JSON.stringify([image]));
+  return retrievedData ? JSON.parse(retrievedData) : [];
+};
+
+export const addToLiked = async (image: Image): Promise<Image[]> => {
+  const images = getImages();
+
+  if (!images.some(img => img.src === image.src)) {
+    images.push(image);
+    await localStorage.setItem("images", JSON.stringify(images));
   }
   window.dispatchEvent(new Event("storage"));
+
+  return images;
 };
-export const removeLiked = (image: Image) => {
-  const retrievedData = localStorage.getItem("images");
-  if (retrievedData) {
-    const images = JSON.parse(retrievedData);
-    const index = images.map((x: Image) => x.src).indexOf(image.src);
+
+export const removeLiked = async (image: Image): Promise<Image[]> => {
+  const images = getImages();
+
+  const index = images.findIndex(img => img.src === image.src);
+  if (index !== -1) {
     images.splice(index, 1);
-    localStorage.setItem("images", JSON.stringify(images));
-    window.dispatchEvent(new Event("storage"));
+    await localStorage.setItem("images", JSON.stringify(images));
   }
+  window.dispatchEvent(new Event("storage"));
+
+  return images;
 };
-export const toggleLiked = (image: Image) => {
+
+export const toggleLiked = async (image: Image): Promise<Image[]> => {
   if (isLiked(image)) {
-    removeLiked(image);
-    return;
+    return removeLiked(image);
+  } else {
+    return addToLiked(image);
   }
-  addToLiked(image);
 };

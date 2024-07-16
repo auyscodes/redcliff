@@ -46,7 +46,7 @@ export const Carousel = () => {
     setSelectedImage(index);
   };
   return (
-    <div className="relative w-full rounded-lg flex justify-center items-center  ">
+    <div className="relative w-full rounded-lg flex justify-center items-center">
       <div
         onClick={prevSlide}
         className="absolute left-5 md:left-10 z-10 hover:cursor-pointer flex justify-center items-center rounded-full bg-white backdrop-blur w-16 h-16 bg-opacity-10"

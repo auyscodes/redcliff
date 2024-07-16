@@ -10,20 +10,41 @@ import { Neighborhood } from "./components/Neighborhood";
 import { Realtor } from "./components/Realtor";
 import { Contact } from "./components/Contact";
 import { LikeSideBar } from "./components/LikeSideBar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getImages, Image } from "./repos/ImageStorage";
 
 function App() {
   const [showSideBar, setShowSideBar] = useState(false);
+  const [likedImages, setLikedImages] = useState<Image[] | []>();
+
   const closeSideBar = () => {
     setShowSideBar(false);
   };
+
   const displaySideBar = () => {
     setShowSideBar(true);
   };
+
+  const handleStorage = () => {
+    setLikedImages(getImages());
+  };
+
+  useEffect(() => {
+    setLikedImages(getImages());
+    window.addEventListener("storage", handleStorage);
+    return () => {
+      window.removeEventListener("storage", handleStorage);
+    };
+  }, []);
+
   return (
     <>
-      <NavBar onShowSideBar={displaySideBar} />
-      <LikeSideBar showSideBar={showSideBar} onHideSideBar={closeSideBar} />
+      <NavBar onShowSideBar={displaySideBar} likedImages={likedImages} />
+      <LikeSideBar
+        showSideBar={showSideBar}
+        onHideSideBar={closeSideBar}
+        likedImages={likedImages}
+      />
       <div className="flex justify-center">
         <div className="container  px-4 lg:px-12">
           {/* <Routes>
