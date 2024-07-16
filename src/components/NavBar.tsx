@@ -34,11 +34,15 @@ export const NavBar = ({ likedImages, onShowSideBar }: NavBarProps) => {
       return;
     }
     if (scrollData.y > 350 && scrollData.y - scrollData.lastY > 0) {
+      if (isNavBarBurgerClicked) {
+        return;
+      }
       setHideNav(true);
     } else {
       setHideNav(false);
     }
-  }, [scrollData]);
+  }, [isNavBarBurgerClicked, scrollData]);
+
   useEffect(() => {
     if (hideNav) {
       setIsNavBarBurgerClicked(false);
@@ -142,7 +146,7 @@ export const NavBar = ({ likedImages, onShowSideBar }: NavBarProps) => {
           className={
             isNavBarBurgerClicked == false
               ? "hidden"
-              : "flex flex-col text-5xl gap-10 divide-y cursor-pointer mt-16 font-light pr-10 "
+              : "flex flex-col text-5xl gap-10 divide-y cursor-pointer font-light overflow-auto max-h-screen pb-40"
           }
         >
           <a className=" rounded-md px-2 py-2" href="#home">

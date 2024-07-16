@@ -14,7 +14,7 @@ export const LikeSideBar = ({
   return (
     <div
       className={
-        "fixed inset-0 w-full bg-black bg-opacity-20  z-10  " +
+        "fixed inset-0 w-full bg-black bg-opacity-20 z-50 " +
         (showSideBar == true ? "" : "hidden")
       }
     >

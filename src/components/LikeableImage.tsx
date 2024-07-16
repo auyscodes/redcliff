@@ -16,10 +16,6 @@ export const LikeableImage = ({
 }: LikeableImageProps) => {
   const [likedImages, setLikedImages] = useState<Image[]>([]);
 
-  useEffect(() => {
-    setLikedImages(getImages());
-  }, []);
-
   const isLiked = (imageSrc: string) => {
     return likedImages.some((image) => image.src === imageSrc);
   };
@@ -34,6 +30,18 @@ export const LikeableImage = ({
       console.error("Error toggling like: ", error);
     }
   };
+
+  const handleStorage = () => {
+    setLikedImages(getImages());
+  };
+
+  useEffect(() => {
+    handleStorage();
+    window.addEventListener("storage", handleStorage);
+    return () => {
+      window.removeEventListener("storage", handleStorage);
+    };
+  }, []);
 
   return (
     <div className={"relative " + (isHidden ? "hidden" : "")}>
