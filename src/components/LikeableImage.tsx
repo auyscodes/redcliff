@@ -44,7 +44,7 @@ export const LikeableImage = ({
   }, []);
 
   return (
-    <div className={"relative " + (isHidden ? "hidden" : "")}>
+    <div className={"relative w-full " + (isHidden ? "hidden" : "")}>
       <img className={className} src={src} alt={alt} />
       <div
         onClick={toggleLike}
